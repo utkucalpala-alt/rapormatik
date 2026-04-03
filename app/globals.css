@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Jost:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Arka planlar */
+  --bg-primary: #0A0718;
+  --bg-secondary: #110D22;
+  --bg-tertiary: #1A1430;
+  --bg-card: rgba(17, 13, 34, 0.6);
+  --bg-glass: rgba(255, 255, 255, 0.02);
+
+  /* Metin */
+  --text-primary: #E8DDD0;
+  --text-secondary: #B0A4C0;
+  --text-muted: #7A6F8A;
+
+  /* Marka renkleri */
+  --emerald: #34D399;
+  --emerald-d: #059669;
+  --emerald-l: #6EE7B7;
+  --emerald-pale: #A7F3D0;
+  --gold: #D4A853;
+  --gold-l: #F0D48A;
+  --cream: #E0F2E9;
+  --teal: #2DD4BF;
+
+  /* Accent gradients */
+  --accent-gradient: linear-gradient(120deg, #6EE7B7 0%, #2DD4BF 50%, #34D399 100%);
+  --accent-glow: rgba(52, 211, 153, 0.2);
+  --emerald-glow: rgba(52, 211, 153, 0.15);
+
+  /* Durum renkleri */
+  --success: #6EE7B7;
+  --warning: #F0D48A;
+  --danger: #F87171;
+  --info: #93C5FD;
+
+  /* Kenar çizgileri */
+  --border-color: rgba(52, 211, 153, 0.1);
+  --border-hover: rgba(52, 211, 153, 0.3);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Gölgeler */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 48px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 40px rgba(52, 211, 153, 0.08);
+  --shadow-emerald: 0 0 40px rgba(52, 211, 153, 0.06);
+
+  /* Geçişler */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: rgba(52,211,153,0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--emerald); }
+
+/* Animasyonlar */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(110,231,183,0.4); }
+  50%      { transform: scale(1); box-shadow: 0 0 0 8px rgba(110,231,183,0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradientFlow {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(52,211,153,0.12); }
+  50% { border-color: rgba(52,211,153,0.3); }
+}
